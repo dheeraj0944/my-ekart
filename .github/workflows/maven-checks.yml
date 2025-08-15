@@ -1,0 +1,74 @@
+name: Maven Checks
+
+on:
+  push:
+    branches:
+      - master
+      - develop
+      - EK*
+  pull_request:
+    branches:
+      - master
+      - develop
+
+permissions:
+  contents: read
+
+env:
+  jsonSecretKey: 'fakeSecretKey'
+  frontendDomainUrl: 'http://localhost:5173'
+  ekartBackendPassword: 'fakeEkartBackendPassword'
+  stripeApiKey: 'fake-stripe-api-key'
+  stripeEndpointSecret: 'fake-stripe-endpoint-secret'
+  adminPassword: 'fakeAdminPassword'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    # Setup redis
+    services:
+      redis:
+        image: redis:alpine
+        ports:
+          - 6379:6379
+        options: >-
+          --health-cmd "redis-cli ping"
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 3
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up JDK
+        uses: actions/setup-java@v4
+        with:
+          java-version: '17'
+          distribution: 'temurin'
+          cache: maven
+          cache-dependency-path: '**/pom.xml'
+
+      - name: Install Redis CLI
+        run: sudo apt-get install -y redis-tools
+
+      - name: Build with Maven
+        run: mvn clean install -DskipTests
+
+      - name: Verify the build
+        run: mvn verify
+
+      - name: Wait for Redis to be ready
+        run: |
+          for i in {1..10}; do
+            if redis-cli -h localhost ping; then
+              echo "Redis is ready!"
+              break
+            fi
+            echo "Waiting for Redis..."
+            sleep 5
+          done
+
+      - name: Run tests
+        run: mvn test

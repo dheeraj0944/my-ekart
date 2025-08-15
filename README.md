@@ -1,23 +1,28 @@
-# ?? My eKart Backend
+![Java](https://img.shields.io/badge/Java-17-blue.svg)
+![Spring Boot](https://img.shields.io/badge/Spring%20Boot-2.7-green.svg)
+![Maven](https://img.shields.io/badge/Maven-3.9-orange.svg)
+![MySQL](https://img.shields.io/badge/MySQL-8.0-blue.svg)
+![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
 
-A robust and scalable **Java Spring Boot e-commerce backend** designed to handle products, orders, users, and payments.  
-Built for performance, security, and flexibility — ready to integrate with any frontend.
+# ?? My eKart Backend
+A robust and scalable **Java Spring Boot e-commerce backend** designed to manage products, orders, users, and payments.  
+Built for **performance**, **security**, and **flexibility** — ready to integrate with any frontend.
 
 ---
 
 ## ?? Features
 
 - **User Management**
-  - Secure authentication & authorization
+  - Secure authentication & authorization (JWT)
   - Role-based access (Admin, Customer)
 - **Product Management**
   - Add, update, delete, and list products
-  - Categories and stock tracking
+  - Category-based filtering and stock tracking
 - **Order Processing**
   - Shopping cart & checkout
-  - Order tracking and status updates
+  - Order tracking & status updates
 - **Payment Integration**
-  - Online payment gateway ready (e.g., Razorpay, Stripe, PayPal)
+  - Payment gateway ready (Razorpay, Stripe, PayPal)
 - **Admin Dashboard APIs**
   - Manage products, orders, and customers
 - **Database Integration**
@@ -27,12 +32,15 @@ Built for performance, security, and flexibility — ready to integrate with any f
 
 ## ?? Tech Stack
 
-- **Backend Framework:** Spring Boot (Java)
-- **Database:** MySQL  
-- **ORM:** Hibernate / JPA  
-- **Build Tool:** Maven  
-- **Security:** Spring Security & JWT Authentication  
-- **API Style:** RESTful APIs  
+| Technology     | Purpose                              |
+|----------------|--------------------------------------|
+| Java 17        | Core backend language                |
+| Spring Boot    | Backend framework                    |
+| Spring Security| Authentication & Authorization       |
+| JWT            | Secure token-based authentication    |
+| MySQL          | Relational database                  |
+| Hibernate / JPA| ORM for database interaction         |
+| Maven          | Build & dependency management        |
 
 ---
 
@@ -86,6 +94,14 @@ mvn spring-boot:run
 | GET    | \/api/products\            | List all products  | ?            |
 | POST   | \/api/products\            | Add new product    | ? (Admin)    |
 | POST   | \/api/orders\              | Create order       | ? (User)     |
+
+---
+
+## ?? GitHub Stats
+
+![Repo Size](https://img.shields.io/github/repo-size/your-username/my-ekart-backend)
+![Stars](https://img.shields.io/github/stars/your-username/my-ekart-backend?style=social)
+![Forks](https://img.shields.io/github/forks/your-username/my-ekart-backend?style=social)
 
 ---
 

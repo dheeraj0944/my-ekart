@@ -1,16 +1,10 @@
-![Java](https://img.shields.io/badge/Java-17-blue.svg)
-![Spring Boot](https://img.shields.io/badge/Spring%20Boot-2.7-green.svg)
-![Maven](https://img.shields.io/badge/Maven-3.9-orange.svg)
-![MySQL](https://img.shields.io/badge/MySQL-8.0-blue.svg)
-![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
-
-# ?? My eKart Backend
+# ðŸ›’ My eKart Backend
 A robust and scalable **Java Spring Boot e-commerce backend** designed to manage products, orders, users, and payments.  
-Built for **performance**, **security**, and **flexibility** — ready to integrate with any frontend.
+Built for **performance**, **security**, and **flexibility** â€” ready to integrate with any frontend.
 
 ---
 
-## ?? Features
+## âœ¨ Features
 
 - **User Management**
   - Secure authentication & authorization (JWT)
@@ -30,7 +24,7 @@ Built for **performance**, **security**, and **flexibility** — ready to integrat
 
 ---
 
-## ?? Tech Stack
+## ðŸ›  Tech Stack
 
 | Technology     | Purpose                              |
 |----------------|--------------------------------------|
@@ -44,30 +38,15 @@ Built for **performance**, **security**, and **flexibility** — ready to integrat
 
 ---
 
-## ?? Project Structure
 
-\\\
-eKart-ecommerce-backend/
-+-- src/
-¦   +-- main/
-¦   ¦   +-- java/com/myekart/...
-¦   ¦   +-- resources/
-¦   ¦       +-- application.properties
-¦   ¦       +-- static/
-+-- pom.xml
-+-- README.md
-\\\
+## ðŸš€ Getting Started
 
----
-
-## ? Getting Started
-
-### 1?? Prerequisites
+### 1 Prerequisites
 - Java 17 or above
 - Maven
 - MySQL
 
-### 2?? Setup
+### 2 Setup
 \\\ash
 # Clone the repository
 git clone https://github.com/your-username/my-ekart-backend.git
@@ -85,28 +64,22 @@ mvn spring-boot:run
 
 ---
 
-## ?? API Endpoints (Sample)
+## ðŸ”Œ API Endpoints
 
-| Method | Endpoint                  | Description         | Auth Required |
-|--------|---------------------------|--------------------|---------------|
-| POST   | \/api/auth/register\       | Register new user  | ?            |
-| POST   | \/api/auth/login\          | Login user         | ?            |
-| GET    | \/api/products\            | List all products  | ?            |
-| POST   | \/api/products\            | Add new product    | ? (Admin)    |
-| POST   | \/api/orders\              | Create order       | ? (User)     |
-
----
-
-## ?? GitHub Stats
-
-![Repo Size](https://img.shields.io/github/repo-size/your-username/my-ekart-backend)
-![Stars](https://img.shields.io/github/stars/your-username/my-ekart-backend?style=social)
-![Forks](https://img.shields.io/github/forks/your-username/my-ekart-backend?style=social)
+| Method | Endpoint           | Description         | Auth Required |
+|--------|--------------------|---------------------|---------------|
+| POST   | /api/auth/register | Register new user   | No            |
+| POST   | /api/auth/login    | Login user          | No            |
+| GET    | /api/products      | List all products   | No            |
+| POST   | /api/products      | Add new product     | Yes (Admin)  |
+| POST   | /api/orders        | Create order        | Yes (User)   |
 
 ---
+
+
 
 ## ?? License
-This project is licensed under the **MIT License** — you can freely use and modify it.
+This project is licensed under the **MIT License** â€” you can freely use and modify it.
 
 ---
 

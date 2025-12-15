@@ -47,20 +47,20 @@ Built for **performance**, **security**, and **flexibility** — ready to integr
 - MySQL
 
 ### 2 Setup
-\\\ash
-# Clone the repository
-git clone https://github.com/your-username/my-ekart-backend.git
-cd my-ekart-backend
 
-# Configure database in src/main/resources/application.properties
+- # Clone the repository
+    - git clone https://github.com/your-username/my-ekart-backend.git
+    - cd my-ekart-backend
+
+- # Configure database in src/main/resources/application.properties
 spring.datasource.url=jdbc:mysql://localhost:3306/ekart_db
 spring.datasource.username=root
 spring.datasource.password=yourpassword
 
-# Build & run
-mvn clean install
-mvn spring-boot:run
-\\\
+- # Build & run
+  - mvn clean install
+  - mvn spring-boot:run
+
 
 ---
 
@@ -78,10 +78,10 @@ mvn spring-boot:run
 
 
 
-## ?? License
+## 📄 License
 This project is licensed under the **MIT License** — you can freely use and modify it.
 
 ---
 
 **Author:** Dheeraj R
-?? dheerajr2004@gmail.com
+📧 dheerajr2004@gmail.com
